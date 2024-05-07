@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "tp-juego"
+  },
+  "targets": {
+    "tp-juego": {
+      "hosting": {
+        "tp-juego": [
+          "tp-juego"
+        ]
+      }
+    }
+  }
+}

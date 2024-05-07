@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
+import { AuthService } from './services/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,9 @@ import { FooterComponent } from './components/footer/footer.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'tp_juegos';
+  title = 'tp-juego';
+
+  constructor(private authS : AuthService){
+    authS.register('nicolas.casais.dassie@gmail.com', 'asd123');
+  }
 }

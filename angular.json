@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tp_juegos": {
+    "tp-juego": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/tp_juegos",
+            "outputPath": "dist/tp-juego",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "tp_juegos:build:production"
+              "buildTarget": "tp-juego:build:production"
             },
             "development": {
-              "buildTarget": "tp_juegos:build:development"
+              "buildTarget": "tp-juego:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "tp_juegos:build"
+            "buildTarget": "tp-juego:build"
           }
         },
         "test": {
@@ -88,6 +88,23 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "tp-juego:build:production",
+              "serveTarget": "tp-juego:serve:production"
+            },
+            "development": {
+              "buildTarget": "tp-juego:build:development",
+              "serveTarget": "tp-juego:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
