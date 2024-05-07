@@ -14,6 +14,6 @@ export class AppComponent {
   title = 'tp-juego';
 
   constructor(private authS : AuthService){
-    authS.register('nicolas.casais.dassie@gmail.com', 'asd123');
+    //authS.register('nicolas.casais.dassie@gmail.com', 'asd123');
   }
 }
