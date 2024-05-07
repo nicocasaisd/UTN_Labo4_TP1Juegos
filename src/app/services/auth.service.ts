@@ -7,8 +7,8 @@ import { User } from '../classes/user';
 })
 export class AuthService {
   
-  userCredentials : any = null;
-  isUserLogged : boolean = false;
+  public userCredentials : any = null;
+  public isUserLogged : boolean = true;
 
   currentUser : User | undefined ;
   

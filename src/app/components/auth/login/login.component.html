@@ -18,7 +18,12 @@
           Remember me
         </label>
       </div> -->
-      <button class="btn btn-primary w-100 py-2" type="submit" (click)="loginHandler()">Sign in</button>
+      @if(authS.isUserLogged){
+        <button class="btn btn-primary w-100 py-2 m-2" type="submit" (click)="logoutHandler()">Log Out</button>
+      } @else {
+        <button class="btn btn-primary w-100 py-2 m-2" type="submit" (click)="loginHandler()">Log In</button>
+        <button class="btn btn-primary w-100 py-2 m-2" type="submit" (click)="registerHandler()">Register</button>
+      }
       <p class="mt-5 mb-3 text-body-secondary">&copy; 2017–2024</p>
     </form>
   </main>
