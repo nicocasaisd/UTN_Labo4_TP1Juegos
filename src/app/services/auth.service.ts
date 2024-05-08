@@ -32,4 +32,9 @@ export class AuthService {
     this.currentUser = new User(this.userCredentials.uid, email);
     console.log(this.currentUser);
   }
+
+  logout(){
+    this.isUserLogged = false;
+      console.log("Logging out..");
+  }
 }

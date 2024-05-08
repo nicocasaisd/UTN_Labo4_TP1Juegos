@@ -13,8 +13,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 })
 export class AppComponent {
   title = 'tp-juego';
+  authS : AuthService;
 
-  constructor(private authS : AuthService){
+  constructor(authS : AuthService){
     //authS.register('nicolas.casais.dassie@gmail.com', 'asd123');
+    this.authS = authS;
   }
 }

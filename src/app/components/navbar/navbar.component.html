@@ -2,7 +2,12 @@
     <div class="container-fluid" >
         <button class="btn btn-secondary m-1" routerLink="home">Home</button>
         <ul class="navbar-nav ms-auto">
-            <button class="btn btn-secondary m-1" routerLink="auth/login">Login</button>
+            @if(authS?.isUserLogged){
+                <button (click)="authS?.logout()" class="btn btn-secondary m-1" routerLink="auth/login">Log Out</button>
+            } @else {
+                <button class="btn btn-secondary m-1" routerLink="auth/login">Login</button>
+            }
+            
             <button class="btn btn-secondary m-1" routerLink="about">About</button>
         </ul>
     </div>
